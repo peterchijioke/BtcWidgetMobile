@@ -49,11 +49,15 @@ const BtcWidget = () => {
 
   if (isLoading) {
     return (
-      <div className=" w-full h-full flex items-center justify-center">
-        <span>
-          <ActivityIndicator color={'#fff'} />
-        </span>
-      </div>
+      <View
+        style={{
+          height: '100%',
+          width: '100%',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+        <ActivityIndicator color={'#fff'} />
+      </View>
     );
   }
 
@@ -61,7 +65,11 @@ const BtcWidget = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Bitcoin Price Converter</Text>
       <Text style={styles.display}>
-        Current Price: ${btcPrice ? btcPrice.toLocaleString() : '--'} USD
+        Current Price: $
+        {data?.data?.bitcoin.usd
+          ? data?.data?.bitcoin.usd.toLocaleString()
+          : '--'}{' '}
+        USD
       </Text>
       <Text style={styles.display}>Last Updated Date: {lastUpdatedDate}</Text>
       <Text style={styles.display}>Last Updated Time: {lastUpdatedTime}</Text>
