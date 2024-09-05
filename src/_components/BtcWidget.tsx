@@ -96,6 +96,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderWidth: 1,
     borderColor: '#ccc',
+    color: 'black',
     borderRadius: 8,
     backgroundColor: '#f9f9f9',
     alignItems: 'center',
@@ -104,15 +105,18 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
+    color: 'black',
   },
   display: {
     fontSize: 18,
     marginBottom: 12,
+    color: 'black',
   },
   input: {
     width: '100%',
     padding: 10,
     fontSize: 16,
+    color: 'black',
     borderWidth: 1,
     borderColor: '#ccc',
     borderRadius: 4,
@@ -120,6 +124,7 @@ const styles = StyleSheet.create({
   },
   bold: {
     fontWeight: 'bold',
+    color: 'black',
   },
 });
 
